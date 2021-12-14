@@ -1,0 +1,16 @@
+1. Import required modules
+2. create server
+3. read request and return response
+
+
+REPL terminal 
+read eval print loop
+
+Callback
+Event loop
+Event Driven Programming 
+Buffers
+Stream 
+
+pipelining 
+chaining the Streams
