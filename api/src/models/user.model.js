@@ -32,7 +32,7 @@ class UserModel {
     create = async ({ username, password, first_name, last_name, email, role = Role.SuperUser, age = 0 }) => {
         const sql = `INSERT INTO ${this.tableName}
         (username, password, first_name, last_name, email, role, age) VALUES (?,?,?,?,?,?,?)`;
-
+        console.log(password);
         const result = await query(sql, [username, password, first_name, last_name, email, role, age]);
         const affectedRows = result ? result.affectedRows : 0;
 

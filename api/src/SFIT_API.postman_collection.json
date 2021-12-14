@@ -1,0 +1,328 @@
+{
+	"info": {
+		"_postman_id": "ef758c2b-a14b-4515-946f-eaf3904fbf73",
+		"name": "SFIT_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "jetsoanalin",
+							"type": "text"
+						},
+						{
+							"key": "first_name",
+							"value": "Jetso",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Analin",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "jetso@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "SuperUser",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "jetsoa",
+							"type": "text"
+						},
+						{
+							"key": "confirm_password",
+							"value": "jetsoa",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "24",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:4040/api/v1/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4040",
+					"path": [
+						"api",
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "jetso@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "jetsoa",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:4040/api/v1/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4040",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMSIsImlhdCI6MTYzOTQ3NTExNiwiZXhwIjoxNjM5NTYxNTE2fQ.D95lHKZyjM57Bn0KycF2GawFFf3P3kskBV0JXbJASI4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4040/api/v1/users/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4040",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user using ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMSIsImlhdCI6MTYzOTQ3NTExNiwiZXhwIjoxNjM5NTYxNTE2fQ.D95lHKZyjM57Bn0KycF2GawFFf3P3kskBV0JXbJASI4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4040/api/v1/users/id/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4040",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"id",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user using username",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMSIsImlhdCI6MTYzOTQ3NTExNiwiZXhwIjoxNjM5NTYxNTE2fQ.D95lHKZyjM57Bn0KycF2GawFFf3P3kskBV0JXbJASI4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4040/api/v1/users/username/jetsoanalin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4040",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"username",
+						"jetsoanalin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Who Am I",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMSIsImlhdCI6MTYzOTQ3NTExNiwiZXhwIjoxNjM5NTYxNTE2fQ.D95lHKZyjM57Bn0KycF2GawFFf3P3kskBV0JXbJASI4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4040/api/v1/users/whoami",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4040",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"whoami"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNiIsImlhdCI6MTYzOTQ3NTg2MSwiZXhwIjoxNjM5NTYyMjYxfQ.NXAzlc4SUGoWMImqGVpDjadA-Y34WiK0qtfm1s_sg58",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "last_name",
+							"value": "Analinn",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:4040/api/v1/users/id/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4040",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"id",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNiIsImlhdCI6MTYzOTQ3NTg2MSwiZXhwIjoxNjM5NTYyMjYxfQ.NXAzlc4SUGoWMImqGVpDjadA-Y34WiK0qtfm1s_sg58",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "last_name",
+							"value": "Analinn",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:4040/api/v1/users/id/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4040",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"id",
+						"6"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

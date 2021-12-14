@@ -29,6 +29,7 @@ class DBConnection {
             }
             if(connection){
                 connection.release();
+                console.log(`Connection Sucessfull to Database ${process.env.DB_DATABASE}`);
             }
             return
         })
